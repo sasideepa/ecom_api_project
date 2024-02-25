@@ -71,4 +71,7 @@ Based on the provided project requirements for the "E-commerce API with Node.js"
 - The product listing might optionally support query parameters for filtering, sorting, or pagination.
 - Error handling should be consistent across all routes, providing meaningful messages and status codes.
 
+### Considerations
+- We used a hard coded JWT token since this is a sample project. in an actual project we will make use of env variables to retrieve JWT token.
+
 This will cover the basic requirements of an API for ECOM backend.

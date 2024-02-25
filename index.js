@@ -2,8 +2,6 @@ const express = require('express');
 const db = require('./db');
 const TABLES = require('./tables');
 const app = express();
-const categoryRoutes = require('./routes/categoryRoutes'); 
-const productRoutes = require('./routes/productRoutes');
 const PORT = process.env.PORT || 3000;
 
 // Test root path. can be used to test if application is running
@@ -25,12 +23,17 @@ app.get('/test_db', async (req, res) => {
 });
 
 // --------- Application code starts here ---------------
+const categoryRoutes = require('./routes/categoryRoutes');
+const productRoutes = require('./routes/productRoutes');
+const userRoutes = require('./routes/userRoutes'); 
 
 app.use(express.json());
 
 app.use('/api/categories', categoryRoutes);
 
 app.use('/api/products', productRoutes);
+
+app.use('/api/users', userRoutes);
 
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`);
