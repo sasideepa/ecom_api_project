@@ -64,3 +64,6 @@ GRANT USAGE, SELECT, UPDATE ON SEQUENCE api_carts_cart_id_seq TO myname;
 
 -- Grant permission for the api_cart_items table sequence
 GRANT USAGE, SELECT, UPDATE ON SEQUENCE api_cart_items_item_id_seq TO myname;
+
+GRANT USAGE, SELECT, UPDATE ON SEQUENCE api_orders_order_id_seq TO myname;
+GRANT USAGE, SELECT, UPDATE ON SEQUENCE api_order_items_order_item_id_seq TO myname;

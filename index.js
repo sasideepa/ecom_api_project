@@ -27,6 +27,7 @@ const categoryRoutes = require('./routes/categoryRoutes');
 const productRoutes = require('./routes/productRoutes');
 const userRoutes = require('./routes/userRoutes'); 
 const cartRoutes = require('./routes/cartRoutes');
+const orderRoutes = require('./routes/orderRoutes');
 
 app.use(express.json());
 
@@ -38,6 +39,7 @@ app.use('/api/users', userRoutes);
 
 app.use('/api/cart', cartRoutes);
 
+app.use('/api/orders', orderRoutes);
 
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`);
