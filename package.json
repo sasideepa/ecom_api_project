@@ -1,7 +1,7 @@
 {
   "name": "api_project",
   "version": "1.0.0",
-  "description": "A simple Express server for an e-commerce API project.",
+  "description": "A simple Express server for an e-commerce API project, with PostgreSQL integration.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^8.5.1"
   }
 }
