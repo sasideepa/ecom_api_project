@@ -55,3 +55,12 @@ CREATE TABLE IF NOT EXISTS api_order_items (
     quantity INTEGER NOT NULL,
     price_at_purchase DECIMAL(10, 2) NOT NULL
 );
+
+-- Grant permission for the api_users table sequence
+GRANT USAGE, SELECT, UPDATE ON SEQUENCE api_users_user_id_seq TO myname;
+
+-- Grant permission for the api_carts table sequence
+GRANT USAGE, SELECT, UPDATE ON SEQUENCE api_carts_cart_id_seq TO myname;
+
+-- Grant permission for the api_cart_items table sequence
+GRANT USAGE, SELECT, UPDATE ON SEQUENCE api_cart_items_item_id_seq TO myname;

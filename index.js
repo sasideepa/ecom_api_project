@@ -26,6 +26,7 @@ app.get('/test_db', async (req, res) => {
 const categoryRoutes = require('./routes/categoryRoutes');
 const productRoutes = require('./routes/productRoutes');
 const userRoutes = require('./routes/userRoutes'); 
+const cartRoutes = require('./routes/cartRoutes');
 
 app.use(express.json());
 
@@ -34,6 +35,9 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/products', productRoutes);
 
 app.use('/api/users', userRoutes);
+
+app.use('/api/cart', cartRoutes);
+
 
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`);

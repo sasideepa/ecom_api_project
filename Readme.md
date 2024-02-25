@@ -73,5 +73,6 @@ Based on the provided project requirements for the "E-commerce API with Node.js"
 
 ### Considerations
 - We used a hard coded JWT token since this is a sample project. in an actual project we will make use of env variables to retrieve JWT token.
+- For simplicity we assume each user has only one cart for now. In future this can be extended further to make carts device specific or region specific etc.,
 
 This will cover the basic requirements of an API for ECOM backend.
