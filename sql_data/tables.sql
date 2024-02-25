@@ -56,6 +56,18 @@ CREATE TABLE IF NOT EXISTS api_order_items (
     price_at_purchase DECIMAL(10, 2) NOT NULL
 );
 
+-- Grant all privileges on all tables in the public schema
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO myname;
+
+-- Grant permissions on all sequences in the public schema
+GRANT USAGE, SELECT, UPDATE ON ALL SEQUENCES IN SCHEMA public TO myname;
+
+-- Grant connect permission on the database
+GRANT CONNECT ON DATABASE api_project_db TO myname;
+
+-- Optional: Grant execute permission on all functions in the public schema
+GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO myname;
+
 -- Grant permission for the api_users table sequence
 GRANT USAGE, SELECT, UPDATE ON SEQUENCE api_users_user_id_seq TO myname;
 
