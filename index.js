@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 // Test root path. can be used to test if application is running
 app.get('/', (req, res) => {
+	console.log("received  request.")
 	res.send('Hello World!');
 });
 
